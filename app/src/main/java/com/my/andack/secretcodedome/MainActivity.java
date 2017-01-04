@@ -1,6 +1,5 @@
 package com.my.andack.secretcodedome;
 
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,13 +12,13 @@ public class MainActivity extends AppCompatActivity {
     private EditText sender;
     private EditText content;
     private Button setBtn;
-    private SharedPreferenceTools tools;
+    private SharePreferenceTools tools;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
-        tools=new SharedPreferenceTools(MainActivity.this);
+        tools=new SharePreferenceTools(MainActivity.this);
 
         setBtn.setOnClickListener(new View.OnClickListener() {
             @Override
